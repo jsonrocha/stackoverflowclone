@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using stackoverflowclone.Models;
 
 namespace stackoverflowclone
 {
@@ -26,5 +27,11 @@ namespace stackoverflowclone
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {}
+
+        public DbSet<AnswerModel> AnswersTable { get; set; }
+
+        public DbSet<QuestionModel> QuestionsTable { get; set; }
+
+        public DbSet<UserModel> UserTable { get; set; }
     }
 }
