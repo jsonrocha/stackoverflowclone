@@ -26,3 +26,17 @@ C:/assignments/stackoverflowclone/obj/Debug/netcoreapp2.1/stackoverflowclone.pdb
 /Users/vzmon1/Documents/WebDev/homework/stackoverflowclone/obj/Debug/netcoreapp2.1/stackoverflowclone.RazorTargetAssemblyInfo.cache
 /Users/vzmon1/Documents/WebDev/homework/stackoverflowclone/obj/Debug/netcoreapp2.1/stackoverflowclone.dll
 /Users/vzmon1/Documents/WebDev/homework/stackoverflowclone/obj/Debug/netcoreapp2.1/stackoverflowclone.pdb
+/Users/vzmon1/Documents/WebDev/homework/stackoverflowclone/server/obj/Debug/netcoreapp2.1/stackoverflowclone.csprojAssemblyReference.cache
+/Users/vzmon1/Documents/WebDev/homework/stackoverflowclone/server/obj/Debug/netcoreapp2.1/stackoverflowclone.csproj.CoreCompileInputs.cache
+/Users/vzmon1/Documents/WebDev/homework/stackoverflowclone/server/obj/Debug/netcoreapp2.1/stackoverflowclone.RazorAssemblyInfo.cache
+/Users/vzmon1/Documents/WebDev/homework/stackoverflowclone/server/obj/Debug/netcoreapp2.1/stackoverflowclone.RazorAssemblyInfo.cs
+/Users/vzmon1/Documents/WebDev/homework/stackoverflowclone/server/obj/Debug/netcoreapp2.1/stackoverflowclone.AssemblyInfoInputs.cache
+/Users/vzmon1/Documents/WebDev/homework/stackoverflowclone/server/obj/Debug/netcoreapp2.1/stackoverflowclone.AssemblyInfo.cs
+/Users/vzmon1/Documents/WebDev/homework/stackoverflowclone/server/obj/Debug/netcoreapp2.1/stackoverflowclone.dll
+/Users/vzmon1/Documents/WebDev/homework/stackoverflowclone/server/obj/Debug/netcoreapp2.1/stackoverflowclone.pdb
+/Users/vzmon1/Documents/WebDev/homework/stackoverflowclone/server/bin/Debug/netcoreapp2.1/stackoverflowclone.deps.json
+/Users/vzmon1/Documents/WebDev/homework/stackoverflowclone/server/bin/Debug/netcoreapp2.1/stackoverflowclone.runtimeconfig.json
+/Users/vzmon1/Documents/WebDev/homework/stackoverflowclone/server/bin/Debug/netcoreapp2.1/stackoverflowclone.runtimeconfig.dev.json
+/Users/vzmon1/Documents/WebDev/homework/stackoverflowclone/server/bin/Debug/netcoreapp2.1/stackoverflowclone.dll
+/Users/vzmon1/Documents/WebDev/homework/stackoverflowclone/server/bin/Debug/netcoreapp2.1/stackoverflowclone.pdb
+/Users/vzmon1/Documents/WebDev/homework/stackoverflowclone/server/obj/Debug/netcoreapp2.1/stackoverflowclone.RazorTargetAssemblyInfo.cache
