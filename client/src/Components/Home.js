@@ -13,7 +13,7 @@ class Home extends Component {
             <div className="sidebar">
             <NavBar />
             </div>
-            <div><p>Testing</p></div>
+            <div className="right"><p>Testing</p></div>
             </div>
             </div>
         );

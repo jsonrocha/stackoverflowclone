@@ -13,6 +13,7 @@ header {
   border-bottom: 1px solid #e2e2e3;
   display: flex;
   flex-direction: initial;
+  padding-left: 300px;
 }
 
 footer {
@@ -59,5 +60,5 @@ li {
 
 .flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: initial;
 }
