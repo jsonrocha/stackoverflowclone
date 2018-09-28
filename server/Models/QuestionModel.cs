@@ -8,8 +8,8 @@ namespace stackoverflowclone.Models
         public string CreatedBy { get; set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public string AnsweredBy { get; set; }
-        public int UpVote  { get; set; }= 0
-        public int DownVote  { get; set; } 0
+        public int UpVote  { get; set; }= 0;
+        public int DownVote  { get; set; } 0;
 
     }
 }

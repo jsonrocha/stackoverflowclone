@@ -8,8 +8,8 @@ namespace stackoverflowclone.Models
         public string AnsweredBy { get; set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public int QuestionId { get; set; } //Foreign Key
-        public int UpVote { get; set; }
-        public int DownVote { get; set; }
+        public int UpVote { get; set; } = 0;
+        public int DownVote { get; set; } = 0;
 
     }
 }
