@@ -19,15 +19,22 @@ namespace stackoverflowclone.Controllers
             this.db = _db;
         }
 
-
         [HttpGet]
-        public IOrderedQueryable<QuestionModel> Get()
+        public ActionResult<IEnumerable<QuestionModel>> Get()
         {
-            var question = this.db.QuestionsTable.OrderBy(q => q.Question)
-            .ThenBy(t => t.CreatedDate);
-            return question;
-
+            return db.QuestionsTable;
+           
         }//END
+
+
+        // [HttpGet]
+        // public IOrderedQueryable<QuestionModel> Get()
+        // {
+        //     var question = this.db.QuestionsTable.OrderBy(q => q.Question)
+        //     .ThenBy(t => t.CreatedDate);
+        //     return question;
+
+        // }//END
 
         [HttpPost]
         public QuestionModel Post([FromBody] QuestionModel question)
@@ -35,8 +42,6 @@ namespace stackoverflowclone.Controllers
             this.db.QuestionsTable.Add(question);
             this.db.SaveChanges();
             return question;
-
-
         }//END 
 
         [HttpPatch("{id}")]
