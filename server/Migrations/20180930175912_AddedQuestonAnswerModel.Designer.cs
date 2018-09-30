@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using stackoverflowclone;
@@ -9,9 +10,10 @@ using stackoverflowclone;
 namespace stackoverflowclone.Migrations
 {
     [DbContext(typeof(StackOverflowContext))]
-    partial class StackOverflowContextModelSnapshot : ModelSnapshot
+    [Migration("20180930175912_AddedQuestonAnswerModel")]
+    partial class AddedQuestonAnswerModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -28,11 +30,11 @@ namespace stackoverflowclone.Migrations
 
                     b.Property<DateTime>("CreatedDate");
 
-                    b.Property<int?>("DownVote");
+                    b.Property<int>("DownVote");
 
                     b.Property<int>("QuestionModelId");
 
-                    b.Property<int?>("UpVote");
+                    b.Property<int>("UpVote");
 
                     b.HasKey("Id");
 
@@ -48,13 +50,13 @@ namespace stackoverflowclone.Migrations
 
                     b.Property<DateTime>("CreatedDate");
 
-                    b.Property<int?>("DownVote");
+                    b.Property<int>("DownVote");
 
                     b.Property<string>("Question");
 
                     b.Property<string>("Title");
 
-                    b.Property<int?>("UpVote");
+                    b.Property<int>("UpVote");
 
                     b.HasKey("Id");
 
@@ -64,7 +66,7 @@ namespace stackoverflowclone.Migrations
             modelBuilder.Entity("stackoverflowclone.Models.AnswerModel", b =>
                 {
                     b.HasOne("stackoverflowclone.Models.QuestionModel", "QuestionModel")
-                        .WithMany("Answers")
+                        .WithMany()
                         .HasForeignKey("QuestionModelId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
