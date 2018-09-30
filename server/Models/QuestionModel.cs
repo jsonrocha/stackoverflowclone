@@ -11,9 +11,9 @@ namespace stackoverflowclone.Models
        
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         
-        public int UpVote  { get; set; }= 0;
-        public int DownVote  { get; set; } = 0;
+        public int? UpVote  { get; set; }= 0;
+        public int? DownVote  { get; set; } = 0;
     
-
+        public List<AnswerModel> Answers {get; set;}
     }
 }
