@@ -40,3 +40,17 @@ C:/assignments/stackoverflowclone/obj/Debug/netcoreapp2.1/stackoverflowclone.pdb
 /Users/vzmon1/Documents/WebDev/homework/stackoverflowclone/server/bin/Debug/netcoreapp2.1/stackoverflowclone.dll
 /Users/vzmon1/Documents/WebDev/homework/stackoverflowclone/server/bin/Debug/netcoreapp2.1/stackoverflowclone.pdb
 /Users/vzmon1/Documents/WebDev/homework/stackoverflowclone/server/obj/Debug/netcoreapp2.1/stackoverflowclone.RazorTargetAssemblyInfo.cache
+C:\assignments\stackoverflowclone\server\bin\Debug\netcoreapp2.1\stackoverflowclone.deps.json
+C:\assignments\stackoverflowclone\server\bin\Debug\netcoreapp2.1\stackoverflowclone.runtimeconfig.json
+C:\assignments\stackoverflowclone\server\bin\Debug\netcoreapp2.1\stackoverflowclone.runtimeconfig.dev.json
+C:\assignments\stackoverflowclone\server\bin\Debug\netcoreapp2.1\stackoverflowclone.dll
+C:\assignments\stackoverflowclone\server\bin\Debug\netcoreapp2.1\stackoverflowclone.pdb
+C:\assignments\stackoverflowclone\server\obj\Debug\netcoreapp2.1\stackoverflowclone.csprojAssemblyReference.cache
+C:\assignments\stackoverflowclone\server\obj\Debug\netcoreapp2.1\stackoverflowclone.csproj.CoreCompileInputs.cache
+C:\assignments\stackoverflowclone\server\obj\Debug\netcoreapp2.1\stackoverflowclone.RazorAssemblyInfo.cache
+C:\assignments\stackoverflowclone\server\obj\Debug\netcoreapp2.1\stackoverflowclone.RazorAssemblyInfo.cs
+C:\assignments\stackoverflowclone\server\obj\Debug\netcoreapp2.1\stackoverflowclone.AssemblyInfoInputs.cache
+C:\assignments\stackoverflowclone\server\obj\Debug\netcoreapp2.1\stackoverflowclone.AssemblyInfo.cs
+C:\assignments\stackoverflowclone\server\obj\Debug\netcoreapp2.1\stackoverflowclone.RazorTargetAssemblyInfo.cache
+C:\assignments\stackoverflowclone\server\obj\Debug\netcoreapp2.1\stackoverflowclone.dll
+C:\assignments\stackoverflowclone\server\obj\Debug\netcoreapp2.1\stackoverflowclone.pdb
