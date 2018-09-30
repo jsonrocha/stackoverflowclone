@@ -26,20 +26,20 @@ namespace stackoverflowclone.Controllers
         {
             // query the database
             var answerResults = this.db
-                .AnswersTable
+                .QuestionsTable
                 .OrderBy(o => o.CreatedDate)
                 .Select( s => new SearchResults {
-                    Answer= s.Answer, 
+                    Answer= s.Question, 
                     Id= s.Id, 
                     
                 });
             // returns the results
 
             var questionResults = this.db
-                .QuestionsTable
-                .Where(w => w.Question.Contains(q))
+                .AnswersTable
+                .Where(w => w.Answer.Contains(q))
                 .Select( s => new SearchResults {
-                    Question = s.Question, 
+                    Question = s.Answer, 
                     Id= s.Id, 
                      
                 });;
