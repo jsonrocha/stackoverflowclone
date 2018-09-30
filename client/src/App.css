@@ -42,10 +42,13 @@ footer {
   font-size: 12px;
 }
 
+.nav-container {
+  height: 880px;
+}
+
 .sidebar {
   border-right: 1px solid #c8ccd0;
-  height: 880px;
-  width: 200px;
+  float: left;
 }
 
 ul {
@@ -61,4 +64,8 @@ li {
 .flex {
   display: flex;
   justify-content: initial;
+}
+
+body {
+  min-height: 880px;
 }
