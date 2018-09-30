@@ -19,22 +19,23 @@ namespace stackoverflowclone.Controllers
             this.db = _db;
         }
 
-        [HttpGet]
-        public ActionResult<IEnumerable<QuestionModel>> Get()
-        {
-            return db.QuestionsTable;
-           
-        }//END
-
-
+        //GETS All Question in unsorted manner
         // [HttpGet]
-        // public IOrderedQueryable<QuestionModel> Get()
+        // public ActionResult<IEnumerable<QuestionModel>> Get()
         // {
-        //     var question = this.db.QuestionsTable.OrderBy(q => q.Question)
-        //     .ThenBy(t => t.CreatedDate);
-        //     return question;
-
+        //     return db.QuestionsTable;
+           
         // }//END
+
+
+        [HttpGet]
+        public IOrderedQueryable<QuestionModel> Get()
+        {
+            var question = this.db.QuestionsTable.OrderBy(q => q.Title.ToLower())
+            .ThenBy(t => t.CreatedDate);
+            return question;
+
+        }//END
 
         [HttpPost]
         public QuestionModel Post([FromBody] QuestionModel question)
@@ -42,20 +43,24 @@ namespace stackoverflowclone.Controllers
             this.db.QuestionsTable.Add(question);
             this.db.SaveChanges();
             return question;
+
         }//END 
 
+
+
         [HttpPatch("{id}")]
-        public QuestionModel Patch(int id)
+        public QuestionModel Patch([FromBody] string update)
         {
             //Find the location inside the database with the Id
-            var question = this.db.QuestionsTable.FirstOrDefault(f => f.Id == id);
-            
+            var question = this.db.QuestionsTable.FirstOrDefault(f => f.Question == update);
+            // db.QuestionsTable.Add(update);
             //Update Time to createDate Now
             question.CreatedDate = DateTime.Now;
             //Save it to Database
             this.db.SaveChanges();
             //Return new information   
             return question;
+
         }//END
 
         [HttpDelete("{id}")]

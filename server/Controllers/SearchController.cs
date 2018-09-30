@@ -27,7 +27,6 @@ namespace stackoverflowclone.Controllers
             // query the database
             var answerResults = this.db
                 .AnswersTable
-                .Where(w => w.Answer.Contains(q) || w.AnsweredBy.Contains(q))
                 .OrderBy(o => o.CreatedDate)
                 .Select( s => new SearchResults {
                     Answer= s.Answer, 

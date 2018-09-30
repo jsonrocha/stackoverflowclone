@@ -32,6 +32,6 @@ namespace stackoverflowclone
 
         public DbSet<QuestionModel> QuestionsTable { get; set; }
 
-        public DbSet<UserModel> UserTable { get; set; }
+        
     }
 }

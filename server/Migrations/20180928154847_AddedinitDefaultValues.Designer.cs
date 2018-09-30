@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using stackoverflowclone;
@@ -9,9 +10,10 @@ using stackoverflowclone;
 namespace stackoverflowclone.Migrations
 {
     [DbContext(typeof(StackOverflowContext))]
-    partial class StackOverflowContextModelSnapshot : ModelSnapshot
+    [Migration("20180928154847_AddedinitDefaultValues")]
+    partial class AddedinitDefaultValues
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -26,17 +28,17 @@ namespace stackoverflowclone.Migrations
 
                     b.Property<string>("Answer");
 
+                    b.Property<string>("AnsweredBy");
+
                     b.Property<DateTime>("CreatedDate");
 
                     b.Property<int>("DownVote");
 
-                    b.Property<int>("QuestionModelId");
+                    b.Property<int>("QuestionId");
 
                     b.Property<int>("UpVote");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("QuestionModelId");
 
                     b.ToTable("AnswersTable");
                 });
@@ -46,13 +48,15 @@ namespace stackoverflowclone.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("AnsweredBy");
+
+                    b.Property<string>("CreatedBy");
+
                     b.Property<DateTime>("CreatedDate");
 
                     b.Property<int>("DownVote");
 
                     b.Property<string>("Question");
-
-                    b.Property<string>("Title");
 
                     b.Property<int>("UpVote");
 
@@ -61,12 +65,18 @@ namespace stackoverflowclone.Migrations
                     b.ToTable("QuestionsTable");
                 });
 
-            modelBuilder.Entity("stackoverflowclone.Models.AnswerModel", b =>
+            modelBuilder.Entity("stackoverflowclone.Models.UserModel", b =>
                 {
-                    b.HasOne("stackoverflowclone.Models.QuestionModel", "QuestionModel")
-                        .WithMany()
-                        .HasForeignKey("QuestionModelId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("CreatedDate");
+
+                    b.Property<string>("UserName");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserTable");
                 });
 #pragma warning restore 612, 618
         }
