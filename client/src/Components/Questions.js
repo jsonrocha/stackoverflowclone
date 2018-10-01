@@ -12,7 +12,7 @@ class Questions extends Component {
     }
   
     componentDidMount() {
-      fetch("http://localhost:5000/api/Question")
+      fetch("https://localhost:5001/api/Question")
         .then(resp => resp.json())
         .then(questionsData => {
           console.log(questionsData);
@@ -20,48 +20,27 @@ class Questions extends Component {
             questions: questionsData
           });
         });
-  
-        fetch("http://localhost:5001/api/Answer")
-        .then(resp => resp.json())
-        .then(answersData => {
-          console.log(answersData);
-          this.setState({
-            answers: answersData
-          });
-        });
+
     }
   
     render() {
       return (
-        <body>
+        <div>
         <NavBar />
           <div>
             <h1>All Questions</h1>
             <Link to="">Ask Question</Link>
           </div>
-          {this.state.questions.map((question, i) => {
+          {this.state.questions.map((question, i)=> {
             return (
               <div key={i}>
                 <div>
-                  <div>
-                    <p>{question.upVotes - question.downVotes}</p>
-                    <p>Votes</p>
-                  </div>
-                  <div>
-                    <p>{this.state.answers.length}</p>
-                    <p>Answers</p>
-                  </div>
-                </div>
-                <div>
-                  <Link to={`./${question.id}`}>
-                    <p className="question">{question.title}</p>
-                  </Link>
-                  <p>Asked {this.getDate(question.date)}</p>
+                <p>{this.state.questions[i].question}</p>
                 </div>
               </div>
             );
           })}
-        </body>
+        </div>
       );
     }
   }
