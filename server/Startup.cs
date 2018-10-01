@@ -27,7 +27,7 @@ namespace stackoverflowclone {
             services
                 .AddEntityFrameworkNpgsql()
                 .AddDbContext<StackOverflowContext>(opt => 
-                    opt.UseNpgsql("server=localhost; Database=StackOverflow"));
+                    opt.UseNpgsql("server=localhost;username=postgres;password=warrior;database=StackOverflow"));
 
 
             services.AddMvc ().SetCompatibilityVersion (CompatibilityVersion.Version_2_1);
@@ -42,6 +42,12 @@ namespace stackoverflowclone {
             }
 
             app.UseHttpsRedirection ();
+              app.UseCors(builder =>
+          builder
+              .AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader()
+              .AllowCredentials());
             app.UseMvc ();
         }
 
