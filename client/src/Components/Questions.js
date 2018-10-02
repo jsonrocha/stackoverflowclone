@@ -25,24 +25,23 @@ class Questions extends Component {
   
     render() {
       return (
-        <div>
-        <NavBar />
+          <section>
+          <NavBar />
           <div>
-            <h1>All Questions</h1>
-            <Link to="">Ask Question</Link>
-          </div>
-          {this.state.questions.map((question, i)=> {
-            return (
-              <div key={i}>
-                <div>
-                <p>{this.state.questions[i].question}</p>
-                </div>
-              </div>
-            );
-          })}
+          <h1>All Questions</h1>
         </div>
+        {this.state.questions.map((question, i)=> {
+          return (
+            <div className="space" key={i}>
+              <div className="headline headlinebox">
+              <Link to="">{this.state.questions[i].question}</Link>
+              </div>
+            </div>
+          );
+        })}
+          </section>
       );
-    }
   }
+}
   
   export default Questions;

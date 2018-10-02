@@ -11,9 +11,9 @@ class NavBar extends Component {
             </header>
             <div className="sidebar">
             <ol>
-                    <li><Link to="/Home">Home</Link></li>
-                    <li><Link to ="/Questions">All Questions</Link></li>
-                    <li>Users</li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to ="/:questions">All Questions</Link></li>
+                    <li><Link to="">Ask a Question</Link></li>
                 </ol>
             </div>
                 </div>
